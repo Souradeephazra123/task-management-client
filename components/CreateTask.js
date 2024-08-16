@@ -2,12 +2,11 @@
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useSearchParams } from "next/navigation";
 
-const CreateTask = () => {
-  const searchParams = useSearchParams();
-  const search = searchParams.get("name");
-  const searchStatus = searchParams.get("status");
+const CreateTask = ({search,searchStatus}) => {
+  // const searchParams = useSearchParams();
+  // const search = searchParams.get("name");
+  // const searchStatus = searchParams.get("status");
 
   const [projectName, setProjectName] = useState("");
   const [title, setTitle] = useState("");
