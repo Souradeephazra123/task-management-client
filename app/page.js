@@ -1,16 +1,16 @@
-import NavBar from "@/components/NavBar";
+'use client'
+import Link from "next/link";
 
 export default function Home() {
-
   return (
-    <div >
-      {/* <div className=" w-1/6 min-h-screen bg-gray-300">
-        <NavBar/>
-      </div>
-      <div className=" w-5/6  bg-gray-300 flex items-center justify-center">
-        Homepage
-      </div> */}
-      Homepage
+    <div className=" flex flex-col">
+      <p>Homepage</p>
+      <Link href={"/project"}  className=" underline">
+        <p>Go to Project page</p>
+      </Link>
+      <Link href={"/task"} className=" underline">
+        <p>Go to Task page</p>
+      </Link>
     </div>
   );
 }
