@@ -129,7 +129,7 @@ const AllTask = () => {
     <div className=" p-3">
       <div className=" flex justify-between">
         <p>All Task</p>
-        <Link href={"/project/add"}>
+        <Link href={"/task/add"}>
           <button className=" bg-blue-400 rounded">Add Task</button>
         </Link>
       </div>
