@@ -245,6 +245,12 @@ const AllProject = () => {
               >
                 Update Data
               </button>
+              <button
+                onClick={() => setModalOpen(false)}
+                className=" bg-sky-400 rounded w-fit p-1.5"
+              >
+                close
+              </button>
             </form>
           </div>
         </div>

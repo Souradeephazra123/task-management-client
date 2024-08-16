@@ -19,7 +19,7 @@ const AllTask = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [description, setDescription] = useState("");
-  const [count,setCount]=useState(0);
+  const [count, setCount] = useState(0);
   const user =
     typeof window !== "undefined" && JSON.parse(localStorage.getItem("user"));
   if (user && userData === "") {
@@ -28,10 +28,10 @@ const AllTask = () => {
 
   useEffect(() => {
     if (userData) {
-      if (TaskDetail?.length === 0 && count<5) {
+      if (TaskDetail?.length === 0 && count < 5) {
         console.log("dispatching data");
         dispatch({ type: "FETCH_ALL_TASK_DETAILS_DATA", payload: userData });
-        setCount(count+1);
+        setCount(count + 1);
       } else {
         setAllData(TaskDetail);
       }
@@ -265,6 +265,12 @@ const AllTask = () => {
                 className=" bg-rose-500 rounded w-fit p-1.5"
               >
                 Update Data
+              </button>
+              <button
+                onClick={() => setModalOpen(false)}
+                className=" bg-sky-400 rounded w-fit p-1.5"
+              >
+                close
               </button>
             </form>
           </div>
