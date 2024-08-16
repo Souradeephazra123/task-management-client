@@ -7,6 +7,9 @@ const CreateTask = ({search,searchStatus}) => {
   // const searchParams = useSearchParams();
   // const search = searchParams.get("name");
   // const searchStatus = searchParams.get("status");
+  console.log(search);
+  console.log(searchStatus);
+  
 
   const [projectName, setProjectName] = useState("");
   const [title, setTitle] = useState("");
@@ -17,10 +20,10 @@ const CreateTask = ({search,searchStatus}) => {
   const [description, setDescription] = useState("");
 
   useEffect(() => {
-    if (search) {
+    if (search!=="undefined") {
       setProjectName(search);
     }
-    if (searchStatus) {
+    if (searchStatus!== "undefined") {
       setStatus(searchStatus);
     }
   }, [search]);
